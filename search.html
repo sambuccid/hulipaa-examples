@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/hulipaa-ui@0.1.1"></script>
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded',() => {
+            Hulipaa({
+                parsePage: function (fileContent) {
+                    const parsedFile = JSON.parse(fileContent)
+                    return {
+                        text: parsedFile.content
+                    }
+                },
+                resultsPath: '/search'
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="hulipaa_searchbar"></div>
+</body>
+
+</html>
